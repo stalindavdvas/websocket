@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket</title>
+</head>
+<body>
+    <h1>Bienvenido: <span id="nombre"></span></h1>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+        socket.on('message', function(data) {
+            document.getElementById('nombre').textContent = data;
+        });
+    </script>
+</body>
+</html>
